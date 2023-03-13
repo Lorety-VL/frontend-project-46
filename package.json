@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "gendiff": "bin/gendiff.js"
+    "gendiff": "bin/gendiff-cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Lorety-VL/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^10.0.0"
+    "commander": "^10.0.0",
+    "lodash": "^4.17.21"
   }
 }
