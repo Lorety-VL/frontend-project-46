@@ -10,3 +10,6 @@
 ## Example how it works with flat JSON files:
 
 [![asciicast](https://asciinema.org/a/u30RawLtc65gzng7X920pKHUn.svg)](https://asciinema.org/a/u30RawLtc65gzng7X920pKHUn)
+## Example how it works with flat YAML files:
+
+[![asciicast](https://asciinema.org/a/u30RawLtc65gzng7X920pKHUn.svg)](https://asciinema.org/a/u30RawLtc65gzng7X920pKHUn)
