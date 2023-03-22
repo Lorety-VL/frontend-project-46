@@ -13,20 +13,26 @@ let nestedFile1json;
 let nestedFile2json;
 let nestedFile1yml;
 let nestedFile2yml;
-let nestedResult;
+let stylishResult;
+let plainResult;
 
 beforeAll(() => {
   nestedFile1json = getFixturePath('nestedFile1.json');
   nestedFile2json = getFixturePath('nestedFile2.json');
   nestedFile1yml = getFixturePath('nestedFile1.yml');
   nestedFile2yml = getFixturePath('nestedFile2.yml');
-  nestedResult = readFile('nestedResult.txt');
+  stylishResult = readFile('stylishResult.txt');
+  plainResult = readFile('plainResult.txt');
 });
 
-test('gendiff-json-nested', () => {
-  expect(genDiff(nestedFile1json, nestedFile2json)).toEqual(nestedResult);
+test('gendiff-json-stylish', () => {
+  expect(genDiff(nestedFile1json, nestedFile2json)).toEqual(stylishResult);
 });
 
-test('gendiff-yaml-nested', () => {
-  expect(genDiff(nestedFile1yml, nestedFile2yml)).toEqual(nestedResult);
+test('gendiff-yaml-stylish', () => {
+  expect(genDiff(nestedFile1yml, nestedFile2yml)).toEqual(stylishResult);
+});
+
+test('gendiff-json-yaml-plain', () => {
+  expect(genDiff(nestedFile1json, nestedFile2yml, 'plain')).toEqual(plainResult);
 });

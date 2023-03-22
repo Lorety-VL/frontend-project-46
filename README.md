@@ -14,5 +14,8 @@
 
 [![asciicast](https://asciinema.org/a/u30RawLtc65gzng7X920pKHUn.svg)](https://asciinema.org/a/u30RawLtc65gzng7X920pKHUn)
 
-## Example how it works with nested files files:
+## Example how it works with nested files with stylish format:
 [![asciicast](https://asciinema.org/a/VgF88vh4FXgqRJXkw7NEhTOZK.svg)](https://asciinema.org/a/VgF88vh4FXgqRJXkw7NEhTOZK)
+
+## Example how it works with nested files with plain format:
+[![asciicast](https://asciinema.org/a/ZVJBU3wnzlJempJ4p0ycjXwbg.svg)](https://asciinema.org/a/ZVJBU3wnzlJempJ4p0ycjXwbg)
