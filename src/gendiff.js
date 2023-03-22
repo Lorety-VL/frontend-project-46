@@ -3,7 +3,7 @@ import { cwd } from 'node:process';
 import path from 'node:path';
 import parse from './parsers.js';
 import getDiffTree from './getDiffTree.js';
-import stylish from './formatters/stylish.js';
+import makeformat from './formatters/format.js';
 
 const genDiff = (filePath1, filePath2, format = 'stylish') => {
   const current = cwd();
@@ -14,8 +14,7 @@ const genDiff = (filePath1, filePath2, format = 'stylish') => {
   const obj1 = parse(file1, fileExtension1);
   const obj2 = parse(file2, fileExtension2);
   const diffTree = getDiffTree(obj1, obj2);
-  const resultStr = stylish(diffTree);
-  return resultStr;
+  return makeformat(diffTree, format);
 };
 
 export default genDiff;
