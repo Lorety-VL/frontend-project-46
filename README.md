@@ -13,3 +13,6 @@
 ## Example how it works with flat YAML files:
 
 [![asciicast](https://asciinema.org/a/u30RawLtc65gzng7X920pKHUn.svg)](https://asciinema.org/a/u30RawLtc65gzng7X920pKHUn)
+
+## Example how it works with nested files files:
+[![asciicast](https://asciinema.org/a/VgF88vh4FXgqRJXkw7NEhTOZK.svg)](https://asciinema.org/a/VgF88vh4FXgqRJXkw7NEhTOZK)
