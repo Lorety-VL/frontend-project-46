@@ -14,11 +14,11 @@ const getDiffTree = (object1, object2) => {
       return { key, type: 'nested', value: getDiffTree(object1[key], object2[key]) };
     }
     if (_.isEqual(object1[key], object2[key])) {
-      return { key, type: 'same', value: object1[key] };
+      return { key, type: 'unChanged', value: object1[key] };
     }
     if (!_.isEqual(object1[key], object2[key])) {
       return {
-        key, type: 'diff', value1: object1[key], value2: object2[key],
+        key, type: 'changed', value1: object1[key], value2: object2[key],
       };
     }
     throw new Error('received unknown key');

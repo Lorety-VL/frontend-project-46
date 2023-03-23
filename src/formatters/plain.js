@@ -9,20 +9,19 @@ const getValue = (value) => {
 
 const plain = (tree, pathMain = []) => tree.flatMap((node) => {
   const path = [...pathMain, node.key].join('.');
-  const currVal = node.value;
   switch (node.type) {
     case 'nested':
-      return plain(currVal, [path]);
+      return plain(node.value, [path]);
     case 'added':
-      return `Property '${path}' was added with value: ${getValue(currVal)}`.trimEnd();
+      return `Property '${path}' was added with value: ${getValue(node.value)}`.trimEnd();
     case 'deleted':
       return `Property '${path}' was removed`.trimEnd();
-    case 'diff':
+    case 'changed':
       return [
         `Property '${path}' was updated. `,
         `From ${getValue(node.value1)} to ${getValue(node.value2)}`.trimEnd(),
       ].join('');
-    case 'same':
+    case 'unChanged':
       return [];
     default:
       throw new Error('unknown type of key');
