@@ -3,7 +3,7 @@ import _ from 'lodash';
 const getDiffTree = (object1, object2) => {
   const keys = _.uniq([...Object.keys(object2), ...Object.keys(object1)]);
   const sortedKeys = _.sortBy(keys);
-  return sortedKeys.flatMap((key) => {
+  return sortedKeys.map((key) => {
     if (!_.has(object2, key)) {
       return { key, type: 'deleted', value: object1[key] };
     }
