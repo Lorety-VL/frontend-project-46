@@ -26,5 +26,5 @@ sudo npm link
 ## Example how it works with nested files with plain format:
 [![asciicast](https://asciinema.org/a/ZVJBU3wnzlJempJ4p0ycjXwbg.svg)](https://asciinema.org/a/ZVJBU3wnzlJempJ4p0ycjXwbg)
 
-## Example how it works with nested files with plain format:
+## Example how it works with nested files with json format:
 [![asciicast](https://asciinema.org/a/jPT3YXp1LuebLvLOsKvwntVbt.svg)](https://asciinema.org/a/jPT3YXp1LuebLvLOsKvwntVbt)
