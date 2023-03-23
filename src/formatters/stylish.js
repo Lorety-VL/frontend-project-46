@@ -18,7 +18,7 @@ const toStr = (nodeValue, depth) => {
 const stylish = (tree, depth = 1) => {
   const indient = ' '.repeat(4 * depth - 2);
   const indientBracket = ' '.repeat(4 * (depth - 1));
-  const lines = tree.map((node) => {
+  const str = tree.map((node) => {
     switch (node.type) {
       case 'nested':
         return `${indient}  ${node.key}: ${stylish(node.value, depth + 1)}`;
@@ -30,14 +30,13 @@ const stylish = (tree, depth = 1) => {
         return `${indient}  ${node.key}: ${toStr(node.value, depth + 1)}`;
       case 'changed':
         return [
-          `${indient}- ${node.key}: ${toStr(node.value1, depth + 1)}`.trimEnd(),
+          `${indient}- ${node.key}: ${toStr(node.value1, depth + 1)}`,
           `${indient}+ ${node.key}: ${toStr(node.value2, depth + 1)}`,
         ].join('\n');
       default:
         throw new Error('unknown type of key');
     }
-  });
-  const str = lines.map((line) => line.trimEnd()).join('\n');
+  }).join('\n');
   return `{\n${str}\n${indientBracket}}`;
 };
 
