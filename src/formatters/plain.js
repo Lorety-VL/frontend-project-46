@@ -13,13 +13,13 @@ const plain = (tree, pathMain = []) => tree.flatMap((node) => {
     case 'nested':
       return plain(node.value, [path]);
     case 'added':
-      return `Property '${path}' was added with value: ${getValue(node.value)}`.trimEnd();
+      return `Property '${path}' was added with value: ${getValue(node.value)}`;
     case 'deleted':
-      return `Property '${path}' was removed`.trimEnd();
+      return `Property '${path}' was removed`;
     case 'changed':
       return [
         `Property '${path}' was updated. `,
-        `From ${getValue(node.value1)} to ${getValue(node.value2)}`.trimEnd(),
+        `From ${getValue(node.value1)} to ${getValue(node.value2)}`,
       ].join('');
     case 'unChanged':
       return [];
